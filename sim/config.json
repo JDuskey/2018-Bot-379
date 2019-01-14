@@ -2,7 +2,7 @@
   "pyfrc": {
   
   	"robot": {
-  	  "w": 6,
+  	  "w": 4,
   	  "h": 3,
       "starting_x": 2, 
       "starting_y": 20,

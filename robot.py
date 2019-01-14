@@ -14,6 +14,7 @@ class MyRobot(magicbot.MagicRobot):
                 self.right = wpilib.Victor(1)
                 self.myRobot = DifferentialDrive(self.left, self.right)
                 self.elevator = wpilib.SpeedControllerGroup(self.elevatorMotorOne, self.elevatorMotorTwo)
+                self.shift = wpilib.DoubleSolenoid(0,0,1)
                 self.elevatorPot = wpilib.AnalogPotentiometer(0)
                 
                 
@@ -21,7 +22,7 @@ class MyRobot(magicbot.MagicRobot):
                 pass
 
 	def teleopPeriodic(self):
-                 self.myRobot.arcadeDrive(self.rightStick.getY(), -self.rightStick.getThrottle() * .4)
+                 self.myRobot.tankDrive(-self.leftStick.getY(), -self.rightStick.getY())
                  
                  
 if __name__ == '__main__':

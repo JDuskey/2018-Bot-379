@@ -26,8 +26,8 @@ class MyRobot(magicbot.MagicRobot):
                 pass
 
 	def teleopPeriodic(self):
-                self.myRobot.tankDrive(-self.leftStick.getY(), -self.rightStick.getY())
-                 if(self.trigger.get()):
+        self.myRobot.tankDrive(-self.leftStick.getY(), -self.rightStick.getY())
+        if(self.trigger.get()):
             if(self.gearshift.get() == 1):
                 self.gearshift.set(2)
             elif(self.gearshift.get() == 2):

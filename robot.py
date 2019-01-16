@@ -32,8 +32,8 @@ class MyRobot(magicbot.MagicRobot):
         if (self.trigger.get()):
             if (self.gearshift.get() == 1):
                 self.gearshift.set(2)
-        elif (self.gearshift.get() == 2):
-            self.gearshift.set(1)
+            elif (self.gearshift.get() == 2):
+                self.gearshift.set(1)
         self.elevator.set(self.elevatorStick.getY())
 
 
